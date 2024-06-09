@@ -29,7 +29,7 @@ const ChatApp = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const handleSend = () => {
+  const handleSend = () => {//处理信息发送的函数
     if (inputValue.trim()) {
       setMessages([...messages, { text: inputValue, isUser: true }]);
       setInputValue("");
@@ -61,7 +61,7 @@ const ChatApp = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <Button onClick={handleSend} colorScheme="teal">
+          <Button onClick={handleSend} color="teal">
             发送
           </Button>
         </HStack>
